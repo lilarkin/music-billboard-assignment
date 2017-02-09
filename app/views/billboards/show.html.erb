@@ -1,0 +1,11 @@
+<h1> <%= @billboard.name %> </h1>
+
+<ul>
+  <li>Name: <%= @billboard.name %> </li>
+  <li>
+    <%= link_to 'Edit', edit_billboard_path(@billboard) %>
+    <%= link_to 'Delete', billboard_path(@billboard), method: :delete, data: {confirm: 'Really Delete?'} %>
+  </li>
+</ul>
+
+<%= link_to 'Home', billboards_path %>
