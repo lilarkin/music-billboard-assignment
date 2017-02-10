@@ -1,8 +1,11 @@
 <h1>Billboard Artists</h1>
 
-<% @billboard.artists.each do |artist| %>
-    <h3><%=@artist.name %></h3>
-    <%= link_to 'Show', billboard_artist_path(artist) %>
-    <%= link_to 'New Artist', new_billboard_artist_path(artist) %>
-    <%= link_to 'Songs', billboard_songs_path(artist) %>
+<% @artists.each do |artist| %>
+    <h3><%= artist.name %></h3>
+    <h4><%= artist.album %></h4>
+    <%= link_to 'Show', billboard_artist_path(@billboard, artist) %>
+    <%= link_to 'Songs', artist_songs_path(artist) %>
 <% end %>
+
+<%= link_to 'New Artist', new_billboard_artist_path(@billboard) %>
+

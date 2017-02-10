@@ -33,12 +33,10 @@ ActiveRecord::Schema.define(version: 20170209000001) do
   create_table "songs", force: :cascade do |t|
     t.string   "title"
     t.string   "album"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.integer  "artist_id"
-    t.integer  "billboard_id"
     t.index ["artist_id"], name: "index_songs_on_artist_id", using: :btree
-    t.index ["billboard_id"], name: "index_songs_on_billboard_id", using: :btree
   end
 
 end

@@ -5,6 +5,7 @@ class CreateArtists < ActiveRecord::Migration[5.0]
       t.string :album
 
       t.timestamps
+
       t.belongs_to :billboard
     end
   end

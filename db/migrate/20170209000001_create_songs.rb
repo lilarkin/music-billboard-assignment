@@ -6,7 +6,6 @@ class CreateSongs < ActiveRecord::Migration[5.0]
 
       t.timestamps
       t.belongs_to :artist
-      t.belongs_to :billboard
     end
   end
 end

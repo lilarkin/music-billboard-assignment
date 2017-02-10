@@ -6,6 +6,7 @@ class BillboardsController < ApplicationController
   end
 
   def show
+    @artists = @billboard.artists.all
   end
 
   def new

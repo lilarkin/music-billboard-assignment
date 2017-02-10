@@ -1,11 +1,19 @@
-<h1> <%= @billboard.artist.name %> </h1>
+<h1> <%= @artist.name %> </h1>
 
 <ul>
-  <li>Name: <%= @billboard.artist.name %> </li>
+  <li>Name: <%= @artist.name %> </li>
   <li>
     <%= link_to 'Edit', edit_billboard_artist_path(@billboard, @artist) %>
     <%= link_to 'Delete', billboard_artist_path(@billboard), method: :delete, data: {confirm: 'Really Delete?'} %>
   </li>
 </ul>
 
-<%= link_to 'Home', billboard_artists_path %>
+<ul>
+  <li>Name: <%= @artist.album %> </li>
+  <li>
+    <%= link_to 'Edit', edit_billboard_artist_path(@billboard, @artist) %>
+    <%= link_to 'Delete', billboard_artist_path(@billboard), method: :delete, data: {confirm: 'Really Delete?'} %>
+  </li>
+</ul>
+
+<%= link_to 'Home', billboard_artists_path(@billboard) %>
