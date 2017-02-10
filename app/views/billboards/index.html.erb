@@ -1,10 +1,14 @@
-<h1>Billboard Charts</h1>
+<h1 class='center background'>Billboard Charts</h1>
 
+<div class='row'>
 <% @billboards.each do |billboard| %>
     <h3><%= billboard.name %></h3>
+        <div class'col s12 m3'>
     <%= link_to 'Show', billboard_path(billboard) %>
     <%= link_to 'Artists', billboard_artists_path(billboard) %>
 <% end %>
+    </div>
+</div>
 
 <%= link_to 'New Billboard', new_billboard_path %>
 

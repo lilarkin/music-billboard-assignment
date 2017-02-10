@@ -1,4 +1,4 @@
-<h1> <%= @billboard.name %> </h1>
+<h1 class="center"> <%= @billboard.name %> </h1>
 
 <ul>
   <li>Name: <%= @billboard.name %> </li>
@@ -8,11 +8,4 @@
   </li>
 </ul>
 
-<% @artists.each do |artist| %>
-    <h3><%= artist.name %></h3>
-    <h4><%= artist.album %></h4>
-    <%= link_to 'Show', billboard_artist_path(@billboard, artist) %>
-<% end %>
-
-<%= link_to 'New Artist', new_billboard_artist_path(@billboard) %>
-<%= link_to 'Home', billboards_path %>
+<%= link_to 'Back', billboards_path %>
